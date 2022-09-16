@@ -5,7 +5,7 @@ items in the shop and changing the attributes of computers in the inventory
 class ResaleShop:
 
     # Import the functions we wrote in procedural_resale_shop.py
-    from procedural_resale_shop import buy, update_price, sell, print_inventory, refurbish
+    from procedural_resale_shop import buy, print_inventory, refurbish, sell, update_price
     
     # What attributes will it need?
     inventory: dict
@@ -42,7 +42,7 @@ class ResaleShop:
         # Updates the price or operating system of 
         # a computer based on its age  
         new_OS = "MacOS Monterey"
-        print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
+        print("Refurbishing Item ID:", computer_id,", updating OS to", new_OS)
         print("Updating inventory...")
         refurbish(computer_id, new_OS)
         print("Done.\n")
@@ -51,3 +51,8 @@ class ResaleShop:
         # Sells a computer if it is in the inventory 
         print("Selling Item ID:", computer_id)
         sell(computer_id)
+
+    def updatePrice(computer, computer_id, new_price):
+        #Changes the price of a computer to new_price
+        print("Updating price of Item ID:", computer_id,"to", new_price)
+        update_price(computer_id, new_price)
