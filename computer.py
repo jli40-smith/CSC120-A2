@@ -3,6 +3,7 @@
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
 class Computer:
+    #Constructor sets up the class Computer
     def __init__(self, description: str,
                     processor_type: str,
                     hard_drive_capacity: int,
