@@ -3,10 +3,20 @@ items in the shop and changing the attributes of computers in the inventory
 """
 
 class ResaleShop:
+
     # Import the functions we wrote in procedural_resale_shop.py
     from procedural_resale_shop import buy, update_price, sell, print_inventory, refurbish
+    
     # What attributes will it need?
     inventory: dict
+
+    # How will you set up your constructor?
+    # Remember: in python, all constructors have the same name (__init__)
+    def __init__(self, inventory):
+        self.inventory = inventory 
+    # You'll remove this when you fill out your constructor
+
+    # What methods will you need?
     def printBanner():
         # Print a little banner
         print("-" * 21)
@@ -39,11 +49,3 @@ class ResaleShop:
         # Now, let's sell it!
         print("Selling Item ID:", computer_id)
         sell(computer_id)
-
-
-    # How will you set up your constructor?
-    # Remember: in python, all constructors have the same name (__init__)
-    def __init__():
-        pass # You'll remove this when you fill out your constructor
-
-    # What methods will you need?
