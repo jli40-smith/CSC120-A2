@@ -18,13 +18,13 @@ class ResaleShop:
 
     # What methods will you need?
     def printBanner():
-        # Print a little banner
+        # Prints a little banner
         print("-" * 21)
         print("COMPUTER RESALE STORE")
         print("-" * 21)
 
     def buyComputer(computer):
-        # Add it to the resale store's inventory
+        # Adds a computer to resale store's inventory
         print("Buying", computer.description)
         print("Adding to inventory...")
         computer_id = buy(computer)
@@ -32,13 +32,15 @@ class ResaleShop:
         return computer_id
 
     def checkInventory():
-         # Make sure it worked by checking inventory
+         # Prints all the items in the inventory 
+         # if it is not empty
         print("Checking inventory...")
         print_inventory()
         print("Done.\n")
 
     def refurbishComputer(computer, computer_id):
-        # Now, let's refurbish it
+        # Updates the price or operating system of 
+        # a computer based on its age  
         new_OS = "MacOS Monterey"
         print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
         print("Updating inventory...")
@@ -46,6 +48,6 @@ class ResaleShop:
         print("Done.\n")
 
     def sellComputer(computer, computer_id):
-        # Now, let's sell it!
+        # Sells a computer if it is in the inventory 
         print("Selling Item ID:", computer_id)
         sell(computer_id)
