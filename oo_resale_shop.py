@@ -1,9 +1,12 @@
+"""The ResaleShop class contains methods for modifying the number of inventory 
+items in the shop and changing the attributes of computers in the inventory
+"""
+
 class ResaleShop:
-    from computer import Computer
     # Import the functions we wrote in procedural_resale_shop.py
     from procedural_resale_shop import buy, update_price, sell, print_inventory, refurbish
     # What attributes will it need?
-
+    inventory: dict
     def printBanner():
         # Print a little banner
         print("-" * 21)
