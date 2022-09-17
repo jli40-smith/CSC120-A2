@@ -1,12 +1,10 @@
 """The ResaleShop class contains methods for modifying the number of inventory 
 items in the shop and changing the attributes of computers in the inventory
 """
+# Import the functions we wrote in procedural_resale_shop.py
+from procedural_resale_shop import buy, print_inventory, refurbish, sell, update_price
 
 class ResaleShop:
-
-    # Import the functions we wrote in procedural_resale_shop.py
-    from procedural_resale_shop import buy, print_inventory, refurbish, sell, update_price
-    
     # What attributes will it need?
     inventory: dict
 
@@ -25,7 +23,8 @@ class ResaleShop:
 
     def buyComputer(computer):
         # Adds a computer to resale store's inventory
-        print("Buying", computer.description)
+        #global computer_id
+        print("Buying", computer["description"])
         print("Adding to inventory...")
         computer_id = buy(computer)
         print("Done.\n")
@@ -38,7 +37,7 @@ class ResaleShop:
         print_inventory()
         print("Done.\n")
 
-    def refurbishComputer(computer, computer_id):
+    def refurbishComputer(computer_id):
         # Updates the price or operating system of 
         # a computer based on its age  
         new_OS = "MacOS Monterey"

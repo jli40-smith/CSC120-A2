@@ -37,7 +37,7 @@ from oo_resale_shop import ResaleShop
 def main():
     
     # First, let's make a computer
-    computer = Computer(
+    computer = Computer.create_computer(
         "Mac Pro (Late 2013)",
         "3.5 GHc 6-Core Intel Xeon E5",
         1024, 64,
@@ -56,7 +56,7 @@ def main():
     # ***everything is fine until it tries to access procedural_resale_shop***
 
     # Now, let's refurbish it
-    ResaleShop.refurbishComputer(computer, computer_id)
+    ResaleShop.refurbishComputer(computer_id)
 
     # Make sure it worked by checking inventory
     ResaleShop.checkInventory()
