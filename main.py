@@ -8,7 +8,7 @@ from procedural_resale_shop import buy, update_price, sell, print_inventory, ref
 # Import Computer class from computer.py
 from computer import Computer
 
-# Import 
+# Import ResaleShop class from oo_resale_shop
 from oo_resale_shop import ResaleShop
 
 """ This helper function takes in a bunch of information about a computer,
@@ -44,18 +44,16 @@ def main():
         "macOS Big Sur", 2013, 1500
     )
 
-    #attempt to print a banner
+    # Prints a computer shop banner
     ResaleShop.printBanner()
 
-    # Add it to the resale store's inventory
+    # Adds computer to the resale store's inventory
     computer_id = ResaleShop.buyComputer(computer)
 
-    # Make sure it worked by checking inventory
+    # Checks inventory to make sure computer was added 
     ResaleShop.checkInventory()
 
-    # ***everything is fine until it tries to access procedural_resale_shop***
-
-    # Now, let's refurbish it
+    # Refurbishes computer to update OS and update inventory with the change
     ResaleShop.refurbishComputer(computer_id)
 
     # Make sure it worked by checking inventory
