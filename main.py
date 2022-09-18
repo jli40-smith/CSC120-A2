@@ -56,13 +56,13 @@ def main():
     # Refurbishes computer to update OS and update inventory with the change
     ResaleShop.refurbishComputer(computer_id)
 
-    # Make sure it worked by checking inventory
+    # Checks inventory to make sure computer was refurbished 
     ResaleShop.checkInventory()
     
-    # Now, let's sell it!
+    # Sells the computer
     ResaleShop.sellComputer(computer, computer_id)
     
-    # Make sure it worked by checking inventory
+    # Checks inventory to make sure computer was sold 
     ResaleShop.checkInventory()
 
 # Calls the main() function when this file is run
