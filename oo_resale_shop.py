@@ -50,7 +50,7 @@ class ResaleShop:
         print("Selling Item ID:", computer_id)
         sell(computer_id)
 
-    def updatePrice(computer, computer_id, new_price):
+    def updatePrice(computer_id, new_price):
         #Changes the price of a computer to new_price
         print("Updating price of Item ID:", computer_id,"to", new_price)
         update_price(computer_id, new_price)

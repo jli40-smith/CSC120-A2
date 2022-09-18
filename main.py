@@ -50,10 +50,16 @@ def main():
     # Adds computer to the resale store's inventory
     computer_id = ResaleShop.buyComputer(computer)
 
-    # Checks inventory to make sure computer was added 
+    # Prints inventory to make sure computer was added 
     ResaleShop.checkInventory()
 
-    # Refurbishes computer to update OS and update inventory with the change
+    #Changes the price of the computer 
+    ResaleShop.updatePrice(computer_id, 1000)
+
+    # Prints inventory to make sure price of computer changed 
+    ResaleShop.checkInventory()
+
+    # Refurbishes computer to update OS and update change to inventory 
     ResaleShop.refurbishComputer(computer_id)
 
     # Checks inventory to make sure computer was refurbished 
