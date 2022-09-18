@@ -12,7 +12,6 @@ class ResaleShop:
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, inventory):
         self.inventory = inventory 
-    # You'll remove this when you fill out your constructor
 
     # What methods will you need?
     def printBanner():
