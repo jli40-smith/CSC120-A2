@@ -1,5 +1,17 @@
-"""The ResaleShop class contains methods for modifying the number of inventory 
-items in the shop and changing the attributes of computers in the inventory
+"""
+DESCRIPTION
+    The ResaleShop class contains methods for modifying the number of inventory 
+    items in the shop and changing the attributes of computers in the inventory
+
+ATTRIBUTES
+    inventory - this is a dictionary where the key is an integer computer_id 
+                used to access Computer objects  
+
+METHODS 
+    printBanner()
+        prints a decorative banner 
+    buyComputer()
+
 """
 from typing import Dict 
 from computer import Computer 
@@ -31,21 +43,34 @@ class ResaleShop:
     def checkInventory():
          # Prints all the items in the inventory 
          # if it is not empty
-        print("Checking inventory...")
-        print_inventory()
-        print("Done.\n")
-    pass
+        if inventory:
+        # For each item
+            for computer_id in inventory:
+            # Print its details
+                print(f'computer_id: {computer_id} : {inventory[computer_id]}')
+        else:
+            print("No inventory to display.")
 
-    def refurbishComputer(computer_id):
+    def refurbishComputer(computer_id: int, new_OS):
         # Updates the price or operating system of 
         # a computer based on its age  
-        new_OS = "MacOS Monterey"
-        print("Refurbishing Item ID:", computer_id,", updating OS to", new_OS)
-        print("Updating inventory...")
-        refurbish(computer_id, new_OS)
-        print("Done.\n")
+        if computer_id in inventory:
+            computer = inventory[computer_id] # locate the computer
+            if int(computer["year_made"]) < 2000:
+                computer["price"] = 0 # too old to sell, donation only
+            elif int(computer["year_made"]) < 2012:
+                computer["price"] = 250 # heavily-discounted price on machines 10+ years old
+            elif int(computer["year_made"]) < 2018:
+                computer["price"] = 550 # discounted price on machines 4-to-10 year old machines
+            else:
+                computer["price"] = 1000 # recent stuff
 
-    def sellComputer(computer, computer_id):
+            if new_OS is not None:
+                computer["operating_system"] = new_OS # update details after installing new OS
+        else:
+            print("Item", computer_id, "not found. Please select another item to refurbish.")
+
+    def sellComputer(computer:int, computer_id):
         # Sells a computer if it is in the inventory 
         print("Selling Item ID:", computer_id)
         sell(computer_id)
