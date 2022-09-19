@@ -8,6 +8,7 @@ Description: an example of procedural code to run a small computer resale shop,
        
        Note: YOU DO NOT NEED TO MODIFY THIS FILE
 """
+"""
 # Import a few useful containers from the typing module
 from typing import Dict, Union, Optional
 
@@ -80,3 +81,4 @@ def refurbish(item_id: int, new_os: Optional[str] = None):
             computer["operating_system"] = new_os # update details after installing new OS
     else:
         print("Item", item_id, "not found. Please select another item to refurbish.")
+"""
