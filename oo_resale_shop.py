@@ -78,9 +78,8 @@ class ResaleShop:
         else: 
             print("Item", computer_id, "not found. Please select another item to sell.")
 
-    pass 
-
-    def updatePrice(computer_id, new_price):
-        #Changes the price of a computer to new_price
-        print("Updating price of Item ID:", computer_id,"to", new_price)
-        update_price(computer_id, new_price)
+    def updatePrice(computer_id : int, new_price : int):
+        if computer_id in inventory:
+            inventory[computer_id]["price"] = new_price
+        else:
+            print("Item", computer_id, "not found. Cannot update price.")

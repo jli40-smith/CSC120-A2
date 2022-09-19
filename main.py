@@ -36,6 +36,16 @@ def main():
     ResaleShop.checkInventory()
     print("Done.\n")
 
+    #Changes price of computer to 1000
+    ResaleShop.updatePrice(computer_id, 1000)
+
+    
+    # Prints inventory to make sure computer was added
+    # Make sure it worked by checking inventory
+    print("Checking inventory...")
+    ResaleShop.checkInventory()
+    print("Done.\n")
+
     # Now, let's refurbish it
     new_OS = "MacOS Monterey"
     print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
@@ -57,6 +67,7 @@ def main():
     print("Checking inventory...")
     ResaleShop.checkInventory()
     print("Done.\n")
+
 
 # Calls the main() function when this file is run
 if __name__ == "__main__": main()
