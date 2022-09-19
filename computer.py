@@ -2,6 +2,30 @@
 DESCRIPTION
     Holds details about the computers  
     of the resale shop inventory 
+
+ATTRIBUTES 
+    description 
+        string containing name of the computer 
+    
+    processor_type 
+        string containing name of computer's processor  
+    
+    hard_drive_capacity 
+        integer with amount of hard drive capacity 
+    
+    memory
+        integer with amount of memory in computer 
+   
+    operating_system 
+        string representing the operating system of computer 
+    
+    year_made 
+        integer representing year computer was manufactured 
+    price
+        integar representing cost of computer 
+
+METHODS 
+    create_computer() - packages the attributes in computer into a dictionary 
 """
 class Computer:
 
