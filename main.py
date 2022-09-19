@@ -1,9 +1,3 @@
-# Import a few useful containers from the typing module
-from calendar import c
-from typing import Dict, Union
-
-# Import the functions we wrote in procedural_resale_shop.py
-
 # Import Computer class from computer.py
 from computer import Computer
 
@@ -30,7 +24,6 @@ def main():
     computer_id = ResaleShop.buyComputer(computer)
     print("Done.\n")
     
-    # Prints inventory to make sure computer was added
     # Make sure it worked by checking inventory
     print("Checking inventory...")
     ResaleShop.checkInventory()
@@ -39,8 +32,7 @@ def main():
     #Changes price of computer to 1000
     ResaleShop.updatePrice(computer_id, 1000)
 
-    
-    # Prints inventory to make sure computer was added
+
     # Make sure it worked by checking inventory
     print("Checking inventory...")
     ResaleShop.checkInventory()

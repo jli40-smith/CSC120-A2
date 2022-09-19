@@ -1,6 +1,7 @@
 """
-The Computer class holds details about the computers 
-in the resale shop inventory 
+DESCRIPTION
+    Holds details about the computers  
+    of the resale shop inventory 
 """
 class Computer:
 
