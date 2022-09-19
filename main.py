@@ -59,7 +59,7 @@ def main():
     ResaleShop.checkInventory()
     print("Done.\n")
     
-        # Now, let's sell it!
+    #Testing error messages
     print("Selling Item ID:", computer_id)
     ResaleShop.sellComputer(computer, computer_id)
 
