@@ -10,28 +10,6 @@ from computer import Computer
 # Import ResaleShop class from oo_resale_shop
 from oo_resale_shop import ResaleShop
 
-""" This helper function takes in a bunch of information about a computer,
-    and packages it up into a python dictionary to make it easier to store
-
-    Note: because python is dynamically typed, you may not be used to seeing 
-    explicit data types (str, int, etc.) listed in a python function. We're 
-    going to go the extra step, because when we get to Java it'll be required!
-"""
-"""def create_computer(description: str,
-                    processor_type: str,
-                    hard_drive_capacity: int,
-                    memory: int,
-                    operating_system: str,
-                    year_made: int,
-                    price: int):
-    return {'description': description,
-            'processor_type': processor_type,
-            'hard_drive_capacity': hard_drive_capacity,
-            'memory': memory,
-            'operating_system': operating_system,
-            'year_made': year_made,
-            'price': price
-    }"""
 
 def main():
     
@@ -43,7 +21,7 @@ def main():
         "macOS Big Sur", 2013, 1500
     )
 
-    # Prints a computer shop banner
+    # Prints a little banner
     ResaleShop.printBanner()
 
     # Adds computer to the resale store's inventory
@@ -52,12 +30,30 @@ def main():
     computer_id = ResaleShop.buyComputer(computer)
     print("Done.\n")
     
+    # Prints inventory to make sure computer was added
+    # Make sure it worked by checking inventory
+    print("Checking inventory...")
+    ResaleShop.checkInventory()
+    print("Done.\n")
+
+    # Now, let's refurbish it
+    new_OS = "MacOS Monterey"
+    print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
+    print("Updating inventory...")
+    ResaleShop.refurbishComputer(computer_id, new_OS)
+    print("Done.\n")
+
+# Make sure it worked by checking inventory
+    print("Checking inventory...")
+    ResaleShop.checkInventory()
+    print("Done.\n")
+    
+
 # Calls the main() function when this file is run
 if __name__ == "__main__": main()
     
 """
-    # Prints inventory to make sure computer was added
-    ResaleShop.checkInventory()
+   
 
     #Changes the price of the computer 
     ResaleShop.updatePrice(computer_id, 1000)
