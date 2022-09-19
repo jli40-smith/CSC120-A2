@@ -8,11 +8,25 @@ ATTRIBUTES
                 used to access Computer objects  
 
 METHODS 
-    printBanner()
-        prints a decorative banner 
-    buyComputer()
-
+   printBanner()
+       prints a decorative banner
+  
+   buyComputer()
+       adds a computer to the inventory
+   
+   checkInventory()
+       prints details for everything in the inventory
+   
+   refurbishComputer()
+       updates the price of the computer based on year created; updates OS if told to
+   
+   sellComputer()
+       selfs computer if in the inventory and removes it from the inventory
+   
+   updatePrice()
+       changes the price of the computer if found
 """
+
 from typing import Dict 
 from computer import Computer 
 
