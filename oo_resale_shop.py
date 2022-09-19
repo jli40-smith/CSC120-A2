@@ -1,13 +1,14 @@
 """The ResaleShop class contains methods for modifying the number of inventory 
 items in the shop and changing the attributes of computers in the inventory
 """
-# Import the functions we wrote in procedural_resale_shop.py
-from procedural_resale_shop import buy, print_inventory, refurbish, sell, update_price
+from typing import Dict 
+from computer import Computer 
+
+computer_id = 0
+# What attributes will it need?
+inventory : Dict[int, Computer] = {}
 
 class ResaleShop:
-    # What attributes will it need?
-    inventory: dict
-
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, inventory):
@@ -19,14 +20,12 @@ class ResaleShop:
         print("-" * 21)
         print("COMPUTER RESALE STORE")
         print("-" * 21)
-
-    def buyComputer(computer):
+    
+    def buyComputer(computer: Computer):
         # Adds a computer to resale store's inventory
-        #global computer_id
-        print("Buying", computer["description"])
-        print("Adding to inventory...")
-        computer_id = buy(computer)
-        print("Done.\n")
+        global computer_id
+        computer_id += 1 #increment computer_id
+        inventory[computer_id] = computer 
         return computer_id
 
     def checkInventory():
@@ -35,6 +34,7 @@ class ResaleShop:
         print("Checking inventory...")
         print_inventory()
         print("Done.\n")
+    pass
 
     def refurbishComputer(computer_id):
         # Updates the price or operating system of 
