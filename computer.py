@@ -5,7 +5,7 @@ DESCRIPTION
 """
 class Computer:
 
-    # What attributes will it need?
+    # ATTRIBUTES: info about pretty much all computers!
     description: str
     processor_type: str
     hard_drive_capacity: int
@@ -14,10 +14,7 @@ class Computer:
     year_made: int
     price: int
 
-    # How will you set up your constructor?
-
-
-    # Remember: in python, all constructors have the same name (__init__)
+    # CONSTRUCTOR: make the computer!
     def __init__(self, description, processor_type, 
                 hard_drive_capacity, memory, operating_system,
                 year_made, price):
@@ -29,7 +26,7 @@ class Computer:
         self.year_made = year_made
         self.price = price
     
-    # What methods will you need?
+    # METHODS: function to create a computer! (helpful for refurbishing)
     def create_computer(description: str,
                     processor_type: str,
                     hard_drive_capacity: int,

@@ -15,7 +15,7 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: All expected methods for `Computer` class are present
 
-**YES** 1 pt: Constructor for `Computer` class is present and sets attributes       correctly
+**YES** 1 pt: Constructor for `Computer` class is present and sets attributes correctly
 
 ### Level 2 (3 pts)
 
@@ -34,13 +34,13 @@ Listed below are various aspects of the assignment.  When you turn in your work,
 
 **YES** 1 pt: Can successfully update the price/OS of a Computer contained in the inventory
 
-____ 1 pt: Program prints appropriate error messages
+**YES** 1 pt: Program prints appropriate error messages
 
 ## General Items (10 pts):
 
 **YES** 4 pts: Program executes fully & consistently without crashing (exception/freeze)
 
-_____ 1 pt: Classes & class members all have header comments
+**YES** 1 pt: Classes & class members all have header comments
 
 _____ 1 pt: Clear and consistent indentation
 
