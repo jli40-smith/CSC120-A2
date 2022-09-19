@@ -23,7 +23,7 @@ inventory : Dict[int, Computer] = {}
 class ResaleShop:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
-    def __init__(self, inventory):
+    def __init__(self, inventory : Dict):
         self.inventory = inventory 
 
     # What methods will you need?
@@ -33,7 +33,7 @@ class ResaleShop:
         print("COMPUTER RESALE STORE")
         print("-" * 21)
     
-    def buyComputer(computer: Computer):
+    def buyComputer(computer : Computer):
         # Adds a computer to resale store's inventory
         global computer_id
         computer_id += 1 #increment computer_id
@@ -51,7 +51,7 @@ class ResaleShop:
         else:
             print("No inventory to display.")
 
-    def refurbishComputer(computer_id: int, new_OS):
+    def refurbishComputer(computer_id : int, new_OS : str):
         # Updates the price or operating system of 
         # a computer based on its age  
         if computer_id in inventory:
@@ -70,10 +70,15 @@ class ResaleShop:
         else:
             print("Item", computer_id, "not found. Please select another item to refurbish.")
 
-    def sellComputer(computer:int, computer_id):
-        # Sells a computer if it is in the inventory 
-        print("Selling Item ID:", computer_id)
-        sell(computer_id)
+    def sellComputer(computer : Computer , computer_id : int):
+        # Sells a computer if it is in the inventory
+        if computer_id in inventory:
+            del inventory[computer_id]
+            print("Item", computer_id, "sold!")
+        else: 
+            print("Item", computer_id, "not found. Please select another item to sell.")
+
+    pass 
 
     def updatePrice(computer_id, new_price):
         #Changes the price of a computer to new_price

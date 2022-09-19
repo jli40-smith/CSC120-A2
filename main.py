@@ -47,32 +47,16 @@ def main():
     print("Checking inventory...")
     ResaleShop.checkInventory()
     print("Done.\n")
-    
 
-# Calls the main() function when this file is run
-if __name__ == "__main__": main()
-    
-"""
-   
-
-    #Changes the price of the computer 
-    ResaleShop.updatePrice(computer_id, 1000)
-
-    # Prints inventory to make sure price of computer changed
-    ResaleShop.checkInventory()
-
-    # Refurbishes computer to update OS and update change to inventory
-    ResaleShop.refurbishComputer(computer_id)
-
-    # Checks inventory to make sure computer was refurbished
-    ResaleShop.checkInventory()
-    
-    # Sells the computer
+# Now, let's sell it!
+    print("Selling Item ID:", computer_id)
     ResaleShop.sellComputer(computer, computer_id)
-    
-    # Checks inventory to make sure computer was sold
+
+    # Prints inventory to make sure computer was added
+    # Make sure it worked by checking inventory
+    print("Checking inventory...")
     ResaleShop.checkInventory()
+    print("Done.\n")
 
 # Calls the main() function when this file is run
 if __name__ == "__main__": main()
-"""
