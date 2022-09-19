@@ -23,7 +23,7 @@ inventory : Dict[int, Computer] = {}
 class ResaleShop:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
-    def __init__(self, inventory : Dict[int, Computer]):
+    def __init__(self, inventory : Dict):
         self.inventory = inventory 
 
     # What methods will you need?

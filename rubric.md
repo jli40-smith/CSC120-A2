@@ -46,8 +46,8 @@ _____ 1 pt: Clear and consistent indentation
 
 **YES** 1 pt: Adheres to conventions on naming / capitalization
 
-_____ 1 pt: Methods and variables all have clear and descriptive names
+**YES** 1 pt: Methods and variables all have clear and descriptive names
 
 _____ 1 pt: All required files included with submission (including completed checklist file)
 
-_____ 1 pt: reflection.md contains your reflection on the assignment
+**YES** 1 pt: reflection.md contains your reflection on the assignment
