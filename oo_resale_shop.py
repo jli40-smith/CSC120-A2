@@ -4,8 +4,9 @@ DESCRIPTION
     items in the shop and changing the attributes of computers in the inventory
 
 ATTRIBUTES
-    inventory - this is a dictionary where the key is an integer computer_id 
-                used to access Computer objects  
+    inventory 
+        this is a dictionary where the key is an integer computer_id 
+        used to access Computer objects  
 
 METHODS 
    printBanner()
