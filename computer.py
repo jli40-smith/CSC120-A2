@@ -1,5 +1,5 @@
-
-"""The Computer class holds details about the computers 
+"""
+The Computer class holds details about the computers 
 in the resale shop inventory 
 """
 class Computer:
