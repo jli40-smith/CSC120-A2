@@ -59,6 +59,16 @@ def main():
     ResaleShop.checkInventory()
     print("Done.\n")
     
+        # Now, let's sell it!
+    print("Selling Item ID:", computer_id)
+    ResaleShop.sellComputer(computer, computer_id)
+
+        #Changes price of computer to 1000
+    ResaleShop.updatePrice(computer_id, 1000)
+
+    ResaleShop.refurbishComputer(computer_id, new_OS)
+
+
 
 # Calls the main() function when this file is run
 if __name__ == "__main__": main()
