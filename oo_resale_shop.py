@@ -68,7 +68,7 @@ class ResaleShop:
 
     def refurbishComputer(computer_id : int, new_OS : str):
         # Updates the price or operating system of 
-        # a computer based on its age  
+        # a computer based on its age if it is in the inventory 
         if computer_id in inventory:
             computer = inventory[computer_id] # locate the computer
             if int(computer["year_made"]) < 2000:
@@ -86,7 +86,7 @@ class ResaleShop:
             print("Item", computer_id, "not found. Please select another item to refurbish.")
 
     def sellComputer(computer : Computer , computer_id : int):
-        # Sells a computer if it is in the inventory
+        # Removes a computer from the inventory if it is in the inventory
         if computer_id in inventory:
             del inventory[computer_id]
             print("Item", computer_id, "sold!")
@@ -94,6 +94,7 @@ class ResaleShop:
             print("Item", computer_id, "not found. Please select another item to sell.")
 
     def updatePrice(computer_id : int, new_price : int):
+        # Updates the price of the computer if it is in the inventory 
         if computer_id in inventory:
             inventory[computer_id]["price"] = new_price
         else:
