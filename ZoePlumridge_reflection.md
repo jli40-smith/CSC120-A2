@@ -1,0 +1,3 @@
+What worked, what didn't, what advice would you give someone taking this course in the future?
+
+We got used to working with git to collaborate. We weren’t able to do regular pair programming because of scheduling, and because we were both uncomfortable with the other watching us code. Instead, one of us would code while texting with the other, who would be in a different place. This meant that we could be more flexible while still having input from both people. We also went to TA hours to figure out some errors and how to work around them. I would highly recommend TA hours—the TAs didn’t always know what was wrong, but they were super nice and tried to help! 
